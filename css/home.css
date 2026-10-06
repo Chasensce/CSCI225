@@ -1,0 +1,708 @@
+/* =====================================================
+   CSCI 225 HOME PAGE
+   ===================================================== */
+
+
+/* =====================================================
+   GENERAL
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", Arial, Helvetica, sans-serif;
+    color: #111111;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   HEADER / NAVIGATION
+   ===================================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 45px;
+
+    background-color: #ff8500;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #003b5c;
+
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   MAIN HOMEPAGE
+   ===================================================== */
+
+.home-page {
+    position: relative;
+
+    width: 100%;
+
+    height: calc(100vh - 105px);
+
+    min-height: 600px;
+
+    margin-top: 45px;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.70),
+            rgba(255, 255, 255, 0.70)
+        ),
+        url("../img/background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =====================================================
+   CENTER SPIDER-MAN IMAGE
+   ===================================================== */
+
+.center-image {
+    position: absolute;
+
+    left: 50%;
+    top: 48%;
+
+    width: 400px;
+    height: auto;
+
+    transform: translate(-50%, -50%);
+
+    border: 3px solid #69acd0;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 4px 10px
+        rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.4s ease;
+}
+
+.center-image:hover {
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+}
+
+
+
+/* =====================================================
+   HOME SECTIONS
+   ===================================================== */
+
+.home-section {
+    position: absolute;
+
+    background-color: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    width: 275px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   BLUE LINES
+   ===================================================== */
+
+.blue-line {
+    width: 100%;
+
+    height: 5px;
+
+    background-color: #69acd0;
+
+    margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   HEADINGS
+   ===================================================== */
+
+h2 {
+    margin: 0;
+
+    color: #111111;
+
+    font-family:
+        "Quicksand",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        1px 1px 2px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================================
+   SECTION CONTENT
+   ===================================================== */
+
+.section-content {
+    opacity: 0;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    margin-top: 0;
+
+    transition:
+        opacity 0.4s ease,
+        max-height 0.4s ease,
+        margin-top 0.4s ease;
+}
+
+
+/*
+   Information appears when the user
+   hovers over a section.
+*/
+
+.home-section:hover .section-content {
+    opacity: 1;
+
+    max-height: 300px;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   INTRODUCTION
+   ===================================================== */
+
+.introduction {
+    left: 4.5%;
+
+    top: 30px;
+
+    width: 275px;
+}
+
+
+/* =====================================================
+   PORTFOLIO
+   ===================================================== */
+
+.portfolio {
+    right: 5.5%;
+
+    top: 30px;
+
+    width: 275px;
+}
+
+
+/* =====================================================
+   ASSIGNMENTS
+   ===================================================== */
+
+.assignments {
+    left: 4.5%;
+
+    bottom: 105px;
+
+    width: 275px;
+}
+
+
+/* =====================================================
+   SCHEDULE
+   ===================================================== */
+
+.schedule {
+    right: 5.5%;
+
+    bottom: 105px;
+
+    width: 275px;
+}
+
+
+/* =====================================================
+   CONTACT INFORMATION
+   ===================================================== */
+
+.contact {
+    left: 50%;
+
+    bottom: 35px;
+
+    width: 400px;
+
+    max-width: 35%;
+
+    transform: translateX(-50%);
+}
+
+.contact:hover {
+    transform: translateX(-50%);
+}
+
+
+/* =====================================================
+   PARAGRAPHS
+   ===================================================== */
+
+p {
+    font-family:
+        "Quicksand",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    text-align: left;
+
+    color: #222222;
+
+    margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   FIRST LETTER
+   ===================================================== */
+
+p::first-letter {
+    color: #e86f00;
+
+    font-size: 1.35em;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   LISTS
+   ===================================================== */
+
+ul,
+ol {
+    color: #333333;
+
+    font-weight: 600;
+
+    font-size: 12px;
+
+    text-align: left;
+}
+
+
+/* Normal bullets */
+
+.portfolio ul {
+    list-style-type: disc;
+
+    padding-left: 22px;
+}
+
+.portfolio li {
+    margin-bottom: 8px;
+}
+
+.assignments ol {
+    padding-left: 22px;
+}
+
+.assignments li {
+    margin-bottom: 7px;
+}
+
+
+/* =====================================================
+   LINKS
+   ===================================================== */
+
+a {
+    color: #0066aa;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+
+    background-color: #ff8500;
+
+    border-radius: 4px;
+
+    padding: 2px 5px;
+}
+
+
+/* =====================================================
+   PORTFOLIO FIRST PARAGRAPH
+   ===================================================== */
+
+.portfolio li:first-child p {
+    background-color:
+        rgba(255, 255, 255, 0.80);
+
+    padding: 7px;
+
+    border-radius: 5px;
+
+    box-shadow:
+        4px 4px 8px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   SCHEDULE TABLE
+   ===================================================== */
+
+table {
+    width: 100%;
+
+    border: 2px solid #333333;
+
+    border-collapse: collapse;
+
+    font-size: 10px;
+
+    background-color:
+        rgba(255, 255, 255, 0.90);
+}
+
+th,
+td {
+    border: 1px solid #555555;
+
+    padding: 6px 5px;
+
+    vertical-align: middle;
+
+    text-align: center;
+
+    empty-cells: show;
+}
+
+th {
+    background-color: #69acd0;
+
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* Even table rows */
+
+tbody tr:nth-child(even) {
+    background-color: #e8f3f8;
+}
+
+
+/* Table hover transition */
+
+tbody tr {
+    transition:
+        background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #ffdca8;
+}
+
+
+/* =====================================================
+   CONTACT TEXT
+   ===================================================== */
+
+.contact p {
+    font-size: 11px;
+
+    text-align: center;
+
+    line-height: 1.4;
+
+    margin-bottom: 4px;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 40px;
+
+    background-color: #ff8500;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   ANIMATED NAME
+   ===================================================== */
+
+.animated-name {
+    position: relative;
+
+    color: #000000 !important;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    margin: 0;
+
+    animation:
+        nameSlide 5s ease-in-out infinite alternate;
+}
+
+
+/*
+   Make the B in "by" BLACK.
+*/
+
+.animated-name::first-letter {
+    color: #000000 !important;
+
+    font-size: inherit;
+
+    font-weight: inherit;
+}
+
+
+/* =====================================================
+   NAME ANIMATION
+   ===================================================== */
+
+@keyframes nameSlide {
+
+    0% {
+        transform: translateX(-220px);
+
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(220px);
+
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .home-section {
+        width: 220px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 11px;
+    }
+
+    .contact {
+        width: 320px;
+
+        max-width: 40%;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .home-page {
+        height: auto;
+
+        min-height: 1100px;
+    }
+
+    .home-section {
+        position: absolute;
+
+        width: 80%;
+    }
+
+    .introduction {
+        left: 10%;
+
+        top: 25px;
+    }
+
+    .portfolio {
+        left: 10%;
+
+        right: auto;
+
+        top: 260px;
+    }
+
+    .assignments {
+        left: 10%;
+
+        top: 490px;
+
+        bottom: auto;
+    }
+
+    .schedule {
+        left: 10%;
+
+        right: auto;
+
+        top: 680px;
+
+        bottom: auto;
+    }
+
+    .contact {
+        left: 10%;
+
+        top: 860px;
+
+        bottom: auto;
+
+        width: 80%;
+
+        max-width: none;
+
+        transform: none;
+    }
+
+    .contact:hover {
+        transform: none;
+    }
+
+    footer {
+        position: relative;
+
+        margin-top: 0;
+    }
+}
+
